@@ -128,13 +128,13 @@ struct SharedUiState {
 }
 
 fn ui_first_window(
-    egui_context: Res<EguiContext>,
+    mut egui_context: Res<EguiContext>,
     mut ui_state: Local<UiState>,
     mut shared_ui_state: ResMut<SharedUiState>,
 ) {
     egui::Window::new("First Window")
         .vscroll(true)
-        .show(egui_context.ctx(), |ui| {
+        .show(egui_context.ctx_mut(), |ui| {
             ui.horizontal(|ui| {
                 ui.label("Write something: ");
                 ui.text_edit_singleline(&mut ui_state.input);

@@ -23,16 +23,18 @@ opt-level = "s"
 
 
 [dependencies]
-rand = "0.8.0"
+rand = "0.8"
 
 bevy = { version = "0.6.0", features=["jpeg"] }
-#bevy_flycam = "0.5.1"
+bevy_flycam = "0.6"
 bevy_config_cam = "0.2"
 smooth-bevy-cameras = "0.2.0"
 #bevy_4x_camera = "0.1.2"
 bevy_toolbar = { git = "https://github.com/HeavyRain266/bevy_toolbar"}
-bevy_egui = "0.10"
 once_cell = "1.9"
+bevy_egui = "0.11"
+bevy_tickles = { git = "https://github.com/ManevilleF/bevy_tickles"}
+bevy-inspector-egui = "0.8"
 
 [[example]]
 name = "load_gltf"
@@ -57,4 +59,16 @@ path = "examples/ui/egui.rs"
 [[example]]
 name = "config_cam"
 path = "examples/camera/config_cam.rs"
+
+[[example]]
+name = "gi_demo"
+path = "examples/gi_demo/main.rs"
+
+[[example]]
+name = "tickles_basic"
+path = "examples/particle/tickles_basic.rs"
+
+[[example]]
+name = "tickles_animated"
+path = "examples/particle/tickles_animated.rs"
 
